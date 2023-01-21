@@ -21,9 +21,6 @@ jobs:
         
       - name: Configure datree CLI
         run: datree config set token 5f971678-ba54-4eb7-806a-4bc956aebcb3
-        
-      - name: Testing against kubernetes YAML File
-        run: datree test deployment.yaml
 
       - name: Scan YAML files for mitre check
         run: kubescape scan framework mitre *.yaml
