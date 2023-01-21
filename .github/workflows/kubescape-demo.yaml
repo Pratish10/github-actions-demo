@@ -16,11 +16,5 @@ jobs:
       - name: Install Kubescape
         run: curl -s https://raw.githubusercontent.com/kubescape/kubescape/master/install.sh | /bin/bash
 
-      - name: Download datree CLI
-        run: curl https://get.datree.io | /bin/bash
-        
-      - name: Configure datree CLI
-        run: datree config set token 5f971678-ba54-4eb7-806a-4bc956aebcb3
-
       - name: Scan YAML files for mitre check
         run: kubescape scan framework mitre *.yaml
